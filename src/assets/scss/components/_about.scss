@@ -1,0 +1,62 @@
+.about {
+  padding: 15rem 0;
+
+  &__content {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__img-side {
+    position: relative;
+  }
+
+  &__emoji-image {
+    position: absolute;
+    z-index: 1;
+    right: 98px;
+    bottom: 35px;
+    width: 6rem;
+  }
+
+  &__main-image {
+    border-radius: 1.7rem;
+    height: 35rem;
+    width: 41rem;
+  }
+
+  & span {
+    position: absolute;
+    right: 33px;
+    bottom: -33px;
+    width: 19rem;
+    height: 19rem;
+    border-radius: 50%;
+    background-color: white;
+
+    & img {
+      -webkit-animation: rotate 9s linear infinite;
+      animation: rotate 9s linear infinite;
+      width: 19rem;
+    }
+
+    @keyframes rotate {
+      100% {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn);
+      }
+    }
+  }
+
+  &__text {
+    &-side {
+      padding-right: 1.5rem;
+    }
+
+    &-description {
+      font-size: 1.7rem;
+      color: #767676;
+    }
+  }
+}

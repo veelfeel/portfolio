@@ -1,0 +1,35 @@
+.header {
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 25px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
+  background-color: white;
+
+  &__list {
+    display: flex;
+
+    &-item {
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+
+      & a {
+        font-size: 1.7rem;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+}
