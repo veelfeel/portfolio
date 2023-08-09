@@ -70,6 +70,14 @@
         font-size: 3rem;
         color: $text-color-black;
       }
+
+      & i {
+        transition: all 0.2s;
+
+        &:hover {
+          color: #147efb;
+        }
+      }
     }
 
     & img {
@@ -94,18 +102,20 @@
       @media (max-width: 500px) {
         right: 3rem;
       }
+
+      @media (max-width: 380px) {
+        right: 2rem;
+      }
     }
   }
 
   &__image {
     -webkit-animation: morph 8s ease-in-out infinite;
     animation: morph 8s ease-in-out infinite;
-    background-image: url("/assets/images/mpm_jpg.nuiyo456cxr5.jpg");
-    background-image: url("/assets/images/mpm_jpg.nuiyo456cxr51.jpg");
+    background-image: url(../images/mpm_jpg.nuiyo456cxr51.jpg);
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    // border: 3px solid #2d2e32;
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     height: 35rem;
     position: relative;
@@ -160,15 +170,28 @@
     }
 
     &-logos {
+      @include md-breakpoint {
+        width: 92%;
+      }
+
       & ul {
         display: flex;
-        justify-content: center;
         flex-wrap: wrap;
+
+        @include md-breakpoint {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          justify-items: center;
+        }
 
         & li {
           &:not(:last-child) {
             padding-bottom: 4rem;
             margin-right: 2.5rem;
+
+            @include md-breakpoint {
+              margin-right: 0;
+            }
           }
 
           & img {
