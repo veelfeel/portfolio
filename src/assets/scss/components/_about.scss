@@ -1,11 +1,20 @@
 .about {
   padding: 15rem 0;
 
+  @include mdlg-breakpoint {
+    padding: 8rem 0;
+  }
+
   &__content {
     display: grid;
     align-items: center;
     justify-content: center;
     grid-template-columns: 1fr 1fr;
+
+    @include mdlg-breakpoint {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
   }
 
   &__img-side {
@@ -18,12 +27,30 @@
     right: 98px;
     bottom: 35px;
     width: 6rem;
+
+    @include mdlg-breakpoint {
+      right: 245px;
+      bottom: 57px;
+    }
+
+    @media (max-width: 750px) {
+      display: none;
+    }
   }
 
   &__main-image {
     border-radius: 1.7rem;
     height: 35rem;
     width: 41rem;
+
+    @include mdlg-breakpoint {
+      margin-bottom: 3.5rem;
+    }
+
+    @media (max-width: 460px) {
+      height: auto;
+      width: 90%;
+    }
   }
 
   & span {
@@ -35,10 +62,25 @@
     border-radius: 50%;
     background-color: white;
 
+    @include mdlg-breakpoint {
+      width: 17rem;
+      height: 17rem;
+      right: 190px;
+      bottom: -3px;
+    }
+
+    @media (max-width: 750px) {
+      display: none;
+    }
+
     & img {
       -webkit-animation: rotate 9s linear infinite;
       animation: rotate 9s linear infinite;
       width: 19rem;
+
+      @include mdlg-breakpoint {
+        width: 17rem;
+      }
     }
 
     @keyframes rotate {
@@ -52,10 +94,19 @@
   &__text {
     &-side {
       padding-right: 1.5rem;
+
+      @include mdlg-breakpoint {
+        max-width: 54rem;
+        margin: 0 auto;
+        padding-right: 0;
+      }
     }
 
     &-description {
       font-size: 1.7rem;
+      font-weight: 500;
+      line-height: 1.5;
+      font-family: Mulish, sans-serif;
       color: #767676;
     }
   }

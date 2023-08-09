@@ -1,0 +1,14 @@
+$mdBreakpoint: 900px;
+$mdlgBreakpoint: 1020px;
+
+@mixin md-breakpoint {
+  @media (max-width: $mdBreakpoint) {
+    @content;
+  }
+}
+
+@mixin mdlg-breakpoint {
+  @media (max-width: $mdlgBreakpoint) {
+    @content;
+  }
+}

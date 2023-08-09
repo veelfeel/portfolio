@@ -1,5 +1,5 @@
 .header {
-  z-index: 1;
+  z-index: 2;
   position: fixed;
   left: 0;
   top: 0;
@@ -7,6 +7,10 @@
   padding: 25px 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
   background-color: white;
+
+  @media (max-width: 400px) {
+    padding: 25px 30px;
+  }
 
   &__list {
     display: flex;
@@ -19,6 +23,10 @@
       & a {
         font-size: 1.7rem;
         font-weight: 600;
+
+        @include md-breakpoint {
+          display: none;
+        }
       }
     }
   }

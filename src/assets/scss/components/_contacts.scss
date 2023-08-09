@@ -1,19 +1,41 @@
 .contacts {
   padding: 11rem 0;
 
+  @include mdlg-breakpoint {
+    padding: 8rem 0;
+  }
+
   &__title {
     margin-bottom: 6rem;
+
+    @media (max-width: 750px) {
+      text-align: center;
+    }
   }
 
   &__icons {
     display: flex;
 
+    @media (max-width: 750px) {
+      flex-direction: column;
+      text-align: center;
+    }
+
     &-box {
       display: flex;
       align-items: center;
 
+      @media (max-width: 750px) {
+        flex-direction: column;
+      }
+
       &:first-child {
         margin-right: 8rem;
+
+        @media (max-width: 750px) {
+          margin-right: 0;
+          margin-bottom: 5rem;
+        }
       }
 
       & span {
@@ -22,6 +44,11 @@
         border-radius: 50%;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         background-color: #fff;
+
+        @media (max-width: 750px) {
+          margin-right: 0;
+          margin-bottom: 1.5rem;
+        }
 
         & i {
           color: #147efb;
@@ -45,11 +72,6 @@
       &:last-child {
         color: #767676;
         cursor: pointer;
-
-        &:hover {
-          color: #147efb;
-          transition: all 0.3s;
-        }
       }
     }
 
@@ -57,6 +79,14 @@
     a {
       font-size: 1.7rem;
       color: #767676;
+    }
+
+    & p:last-child,
+    a {
+      &:hover {
+        color: #147efb;
+        transition: all 0.3s;
+      }
     }
   }
 }

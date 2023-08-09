@@ -7,12 +7,22 @@
     align-items: center;
     justify-content: space-between;
     color: white;
+
+    @media (max-width: 550px) {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
   }
 
   &__copyright {
     font-size: 1.7rem;
     font-weight: 700;
     color: white;
+
+    @media (max-width: 550px) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__socials {
