@@ -6,10 +6,25 @@
   }
 
   &__block {
+    height: 40rem;
     padding: 2rem;
     border-radius: 1.7rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
+    background-color: white;
+
+    &:not(:last-child) {
+      margin-bottom: 5rem;
+    }
+
+    &:last-child {
+      flex-direction: row-reverse;
+
+      & .projects__image-side {
+        margin-right: 0;
+        margin-left: 8rem;
+      }
+    }
   }
 
   &__image-side {
@@ -22,11 +37,21 @@
     & img {
       width: 100%;
       height: auto;
-      transition: transform 10s ease-in-out 0s;
+      transform: translateY(0%);
+      transition: transform 7s ease-in-out 0s;
+    }
 
+    &-first-image {
       &:hover {
-        transform: translateY(-83%);
-        transition: transform 10s ease-in-out 0s;
+        transform: translateY(-75%);
+        transition: transform 7s ease-in-out 0s;
+      }
+    }
+
+    &-second-image {
+      &:hover {
+        transform: translateY(-40%);
+        transition: transform 3s ease-in-out 0s;
       }
     }
   }
@@ -55,8 +80,9 @@
   }
 
   &__stack {
+    margin-bottom: 4rem;
+
     & ul {
-      margin-bottom: 3rem;
       display: flex;
       justify-content: center;
 
