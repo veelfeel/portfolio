@@ -7,11 +7,28 @@
           alt=""
           class="about__emoji-image"
         />
-        <img
-          src="./assets/images/developer-workspace.jpg"
-          alt="developer-workspace"
-          class="about__main-image"
-        />
+        <picture>
+          <source
+            type="image/webp"
+            media="(max-width: 767px)"
+            srcset="./assets/images/programming-767.webp"
+          />
+          <source
+            type="image/webp"
+            media="(min-width: 768px)"
+            srcset="./assets/images/programming.webp"
+          />
+          <source
+            type="image/jpeg"
+            media="(max-width: 767px)"
+            srcset="./assets/images/programming-767.jpg"
+          />
+          <img
+            src="./assets/images/programming.jpg"
+            alt="programming"
+            class="about__main-image"
+          />
+        </picture>
         <span>
           <img src="./assets/images/spinning-text.svg" alt="spinning-text" />
         </span>
