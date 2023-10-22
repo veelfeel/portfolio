@@ -72,15 +72,14 @@
       margin: 2.5rem 0;
 
       & a {
-        font-size: 3rem;
-        color: $text-color-black;
-      }
-
-      & i {
-        transition: all 0.2s;
-
         &:hover {
-          color: #147efb;
+          & svg {
+            fill: $primary;
+          }
+        }
+
+        & svg {
+          transition: fill 0.2s ease-in-out;
         }
       }
     }
@@ -186,6 +185,7 @@
         @include md-breakpoint {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 2fr 2fr 0fr;
           justify-items: center;
         }
 
@@ -195,6 +195,7 @@
             margin-right: 2.5rem;
 
             @include md-breakpoint {
+              padding-bottom: 0;
               margin-right: 0;
             }
           }

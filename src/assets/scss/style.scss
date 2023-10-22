@@ -56,17 +56,13 @@ a {
   color: inherit;
 }
 
-// img {
-//   display: block;
-// }
-
 .mobile-burger {
   font-size: 2.3rem;
   cursor: pointer;
   display: none;
 
   &:hover {
-    color: #147efb;
+    color: $primary;
     transition: all 0.3s;
   }
 
@@ -93,14 +89,11 @@ a {
 
   & span {
     position: absolute;
-    top: 2rem;
-    right: 4rem;
+    display: flex;
+    top: 2.5rem;
+    right: 4.7rem;
     font-size: 3.3rem;
     cursor: pointer;
-
-    & i {
-      color: $text-color-black;
-    }
   }
 
   & ul {
@@ -119,7 +112,7 @@ a {
       font-weight: 500;
 
       &:hover {
-        color: #147efb;
+        color: $primary;
         transition: all 0.3s;
       }
     }
@@ -135,7 +128,7 @@ a {
   font-size: 1.7rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: #147efb;
+  color: $primary;
 }
 
 .section-title {
