@@ -128,15 +128,18 @@
     & ul {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
+      grid-row-gap: 2rem;
 
       & li {
-        padding: 1rem 1.3rem;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        font-size: 1.7rem;
+        font-size: 1.6rem;
         font-weight: 600;
+        line-height: 0.6;
 
         &:not(:last-child) {
           margin-right: 1rem;
+          padding-right: 1rem;
+          border-right: 1px solid #aeaeae;
         }
       }
     }
