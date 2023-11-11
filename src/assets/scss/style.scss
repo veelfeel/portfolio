@@ -33,7 +33,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: system-ui;
   color: $text-color-black;
 }
 
@@ -52,6 +52,7 @@ ul {
 }
 
 a {
+  width: fit-content;
   text-decoration: none;
   color: inherit;
 }
